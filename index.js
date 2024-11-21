@@ -2,9 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser'); 
 const bfhlRoutes = require('./routes/bfhl');
 const cors = require('cors');
-app.use(cors());
+
 
 const app = express(); 
+app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json()); 
 
