@@ -17,7 +17,7 @@ function processPostRequest(data) {
     const isPrimeFound = numbers.some(num => isPrime(Number(num)));
 
     
-    const fileValid = file_b64 && isValidBase64(file_b64);
+    const fileValid = file_b64 ? isValidBase64(file_b64):false;
     const fileMimeType = fileValid ? getMimeType(file_b64) : null;
     const fileSizeKb = fileValid ? getFileSizeKb(file_b64) : null;
     const userId = `${data.full_name.replace(/\s+/g, '_').toLowerCase()}_${data.dob.replace(/-/g, '')}`;

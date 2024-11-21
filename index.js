@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const bfhlRoutes = require('./routes/bfhl');
 
 const app = express(); 
+app.use(express.json());
 app.use(bodyParser.json()); 
 
 app.use('/bfhl', bfhlRoutes);
